@@ -1,0 +1,56 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+<title>
+dzialania10
+</title>
+</head>
+<body>
+<script type="text/javascript">
+
+//deklaracje zmiennych okreslających parametry rownania
+var A = 1;
+var B = 1;
+var C = -2;
+
+//wyswietlenie parametrow rownannia na stronie
+document.write("Parametry rownania: <br />");
+document.write("A= "+ A + ", B= "+ B +" , C= "+ C + " <br />"); 
+
+//sprawdzenie, czy jest to rownanie kwadratowe
+if (A==0) {
+		//A jest rowne zero, rownania nie jest kwadratowe		
+		document.write("to nie jest rownanie kwadrwatowe: A=0!");
+		}
+	else{
+		//A jest rozne od zera, roznannie jest kwadratowe 
+		//obliczanie delty
+		var delta = B * B-4 * A * C;
+		//jesli delta mniejsza od zera
+				if (delta < 0) {
+					document.write("Delta < 0 <br /> ");
+					document.write("To rownanie nie ma rozwiazania w zbiorze liczb rzeczywisctych");
+					}
+					
+		//jesli delta wieksza od zera lub rowna zero
+		else {
+		//jesli delta jest rowna zero 
+		if (delta == 0) {
+		//obliczanie wyniku
+		var wynik =- B /(2 * A); //brak nawiasu
+		document.write("Rozwiazanie: x = "+ wynik);
+		//jesli delta jest wieksza od zera
+		else {
+		//obliczanie wynikow i wyswietlenie ich na stronie
+		wynik = (-B + Math.sqrt(delta)) / (2 * A);//brak nazwiasu
+		document.write ("Rozwiazanie: x1 = "+wynik);
+		wynik = (-B - Math.sqrt (delta)) / (2 * A); //brak nawiasu
+		document.write(" , x2 =" + wynik);
+		}
+		}
+		}
+</script>
+</body>
+</html>
