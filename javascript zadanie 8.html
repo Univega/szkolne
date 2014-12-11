@@ -1,0 +1,41 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>
+zadanie 8
+</title>
+</head>
+<body>
+<script type="text/javascript">
+	var a= parseInt(prompt("Podaj długość 1. boku równoległoboku:"));
+	var b= parseInt(prompt("Podaj długość 2. boku równoległoboku:"));
+	var h= parseInt(prompt("Podaj wysokość równoległoboku:"));
+
+//prawie dokonczone,błędy w warunkach //
+	
+if ( a != b || a != h || b !=h ) 
+	{
+	document.write(" Boki są różne od siebie i żaden z nich nie jest równy wysokości ");
+	}
+if ( a == b || a != h || b != h )
+	{
+	document.write("Ten równoległobok jest rombem, ponieważ jego boki są sobie równe ale nie równe wysokości");
+	}
+if ( a != b || a == h ) 
+	{
+	document.write("Ten równoległobok jest prostokątem");
+	}
+	else if (b == h)
+	{
+	document.write("Ten równoległobok jest prostokątem");
+	}
+	else if ( a==b | b==h || a==h )
+	{
+	document.write("Jest kwadratem");
+	}
+	else {
+	document.write("Dobre pytanie co to jest w takim razie") }
+</script>
+</body>
+</html>
